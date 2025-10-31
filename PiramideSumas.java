@@ -9,7 +9,7 @@ public class PiramideSumas {
         String resp;
 
         do {
-            int num = leerEntero(sc, "Introduzca un número: ")
+            int num = leerEntero(sc, "Introduzca un número: "); // CNL20251031 - Faltaba ';' al final de la instrucción
 
             while (num < 0 && num > 20) {
                 num = leerEntero(sc, "**Valor fuera de rango** Introduzca un número entre 0 y 20: ");
@@ -18,9 +18,9 @@ public class PiramideSumas {
             System.out.println("\nSu pirámide de sumas es la siguiente:\n" + piramide(num));
 
             System.out.print("¿Quiere hacer otra pirámide? (s/n) ");
-            String resp = sc.next().trim().toUpperCase();
+            resp = sc.next().trim().toUpperCase();
 
-        } while (resp.equals("S");
+        } while (resp.equals("S")); // CNL20251031 - Faltaba ");" al final de la instrucción
 
         borrarConsola();
         System.out.println("¡¡¡PROGRAMA FINALIZADO!!!");
@@ -38,7 +38,7 @@ public class PiramideSumas {
     }
 
     public static void borrarConsola() {
-        for (int i = 0; i < 50, i++) {
+        for (int i = 0; i < 50; i++) {// CNL20251031 - Había que sustituir ',' por ';' tras "i<50"
             System.out.println();
         }
     }
@@ -65,7 +65,7 @@ public class PiramideSumas {
             n -= 1;
         }
 
-        return resultado;
+        return res; // CNL20251031 - Había que sustituir "resultado" por "res"
     }
 
 }
